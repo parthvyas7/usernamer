@@ -7,7 +7,7 @@ const router = require('./routes')
 require('./db')
 
 const corsOptions = {
-  origin: "http://localhost:5173" // Frontend URI 
+  origin: process.env.FRONTEND_URI ?? '*'
 }
 
 app.use(express.json())

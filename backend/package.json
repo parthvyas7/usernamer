@@ -7,7 +7,7 @@
     "dev": "nodemon index"
   },
   "author": "Parth Vyas",
-  "license": "ISC",
+  "license": "MIT",
   "description": "usernamer-backend",
   "dependencies": {
     "cors": "^2.8.5",

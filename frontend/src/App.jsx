@@ -4,7 +4,7 @@ import useSuggestedUsernames from "./useSuggestedUsernames";
 import { TiDeleteOutline } from "react-icons/ti";
 
 const App = () => {
-  const serverUri = import.meta.env.VITE_SERVER_URI;
+  const serverUri = import.meta.env.VITE_BACKEND_URI;
   const [username, setUsername] = useState("");
   const [usernames, setUsernames] = useState([]);
   const [feelingLucky, setFeelingLucky] = useState(false);
