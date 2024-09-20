@@ -59,9 +59,9 @@ const App = () => {
         body: JSON.stringify({ username }),
       })
         .then((res) => res.json())
-        .then(() => {
+        .then((res) => {
           setUsername("");
-          setUsernames([{ username }, ...usernames]);
+          setUsernames([...usernames, res.newUser]);
         });
     }
   };
@@ -110,13 +110,11 @@ const App = () => {
         body: JSON.stringify({ username: updatedUsername }),
       })
         .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
+        .then(() => {
           const changedUsernames = usernames.map((un) => {
             if (un._id === id) un.username = updatedUsername;
             return un;
           });
-          console.log(changedUsernames);
           setEditId(null);
           setUsername("");
           setUsernames(changedUsernames);
@@ -265,9 +263,9 @@ const App = () => {
           Usernamer
         </p>
         <p className="text-2xl my-2 text-justify">
-          Usernamer provides AI-generated (Google Gemini) username suggestions for your web
-          presence, allowing you to save, customize, and share them across
-          platforms.
+          Usernamer provides AI-generated (Google Gemini) username suggestions
+          for your web presence, allowing you to save, customize, and share them
+          across platforms.
         </p>
       </div>
     </>
