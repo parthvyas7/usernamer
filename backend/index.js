@@ -7,7 +7,9 @@ const router = require('./routes')
 require('./db')
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URI ?? '*'
+  origin: process.env.FRONTEND_URI ?? '*',
+  optionsSuccessStatus: 200,
+  credentials: true
 }
 
 app.use(express.json())
