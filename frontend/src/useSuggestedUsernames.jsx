@@ -6,7 +6,7 @@ const useSuggestedUsernames = () => {
   const cacheKey = "cachedUsernames";
   const requestCountKey = "requestCount";
   const requestTimestampKey = "requestTimestamp";
-  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY);
+  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   const prompt =
     "Suggest 5 awesome usernames which can be used across web and give out your response with only 5 usernames in single line, space-separated";
