@@ -6,7 +6,7 @@ Usernamer provides AI-generated (Google Gemini) username suggestions for your we
 
 # Demo
 
-[Visit]()
+[Visit](https://usernamer.vercel.app)
 
 ## Screenshots
 
